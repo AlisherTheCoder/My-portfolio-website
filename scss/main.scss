@@ -100,8 +100,25 @@ main {
         padding: 0.4rem;
 
         &:hover {
-            color: $secondaryColor;
-            @include easeOut();
+            // color: $secondaryColor;
+            // @include easeOut();
+            .ig-logo{
+                color: #c13584;
+                @include easeOut();
+            };
+            .tg-logo{
+                color: #0088cc;
+                @include easeOut();
+            };
+            .github-logo{
+                color: #211F1F;
+                @include easeOut();
+            };
+            .yt-logo {
+                color: #FF0000;
+                @include easeOut();
+            }
+
         }
     }
 }
