@@ -45,6 +45,7 @@ body{
 // Headings 
 
 h1,h2,h3 {
+    text-transform: uppercase;
     margin: 0;
     font-weight: 400;
     &.lg-heading {
@@ -58,6 +59,12 @@ h1,h2,h3 {
     }
         
 };
+h1{
+    animation: moveInLeft 1s;
+}
+h2{
+    animation: moveInRight 1s;
+}
 
 a {
     color: white;
@@ -82,6 +89,10 @@ main {
             margin-top: 20vh;
         }
     }
+    .full-stack,.freelancer {
+        color: $secondaryColor;
+        
+    }
 }
 .icons {
     margin-top: 1rem;
@@ -94,3 +105,31 @@ main {
         }
     }
 }
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform:translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform:translateX(150px);
+    }
+    80%{
+        transform: translateX(-40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
