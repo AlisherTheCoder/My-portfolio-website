@@ -1,0 +1,60 @@
+@import 'mixins';
+
+
+// Widescreens
+@include mediaXl {
+
+}
+// Dekstop & Tablets
+@include mediaLg {
+
+}
+// Tablets
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            font-weight: 200;
+            line-height: 0.8;
+            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            .surname {
+                font-size: 3.5rem;
+            }
+            
+        }
+    }
+
+    ul.menu-nav, div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+    }
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%,0,0);
+        .portrait {
+            background: url(../images/my_photo_small.jpg);
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+// Smartphones
+@include mediaSm {
+    main#home h1,h2{
+        margin-top: 10vh;
+    }
+};

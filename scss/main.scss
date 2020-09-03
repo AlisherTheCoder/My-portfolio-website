@@ -1,6 +1,7 @@
 @import 'menu';
 @import 'variables';
 @import 'mixins';
+@import 'mobile';
 
 
 
@@ -22,7 +23,7 @@ body{
 // Headings 
 
 h1,h2,h3 {
-    text-transform: uppercase;
+    
     margin: 0;
     font-weight: 400;
     &.lg-heading {
