@@ -67,6 +67,11 @@
     .projects-info {
         grid-template-columns: repeat(2, 1fr);
     }
+    .boxes {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+    
 }
 // Smartphones
 @include mediaSm {
@@ -75,5 +80,9 @@
     }
     .projects-info {
         grid-template-columns: 1fr;
+    }
+    .boxes {
+        font-size: 1rem;
+        padding: 1rem 2rem;
     }
 };

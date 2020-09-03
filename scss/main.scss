@@ -143,12 +143,14 @@ main {
         border-radius: 50%;
         border: $secondaryColor 3px solid;
     }
+    
     .bio {
         grid-area: bio;
         font-size: 1.5rem;
         .text-secondary {
             color: $secondaryColor;
         }
+        
     }
     .job-1{
         grid-area: job1;
@@ -184,6 +186,32 @@ main {
         }
     }
 }
+// Contact Page
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    div {
+        font-size: 2rem;
+        border: 3px white solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+        &:hover {
+            background: $secondaryColor;
+            color: set-text-color($secondaryColor);
+            span {
+                color: set-text-color($secondaryColor);
+                
+            }
+        }
+        
+    }
+}
+
 //  Button styles 
 
 .btn {
@@ -216,6 +244,9 @@ main {
     background: darken($mainColor, 10);
     color: set-text-color($mainColor);
     height: 60px;
+}
+.text-secondary {
+    color: $secondaryColor;
 }
 
 
