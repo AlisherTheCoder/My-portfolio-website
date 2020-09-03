@@ -1,7 +1,6 @@
 @import 'menu';
 @import 'variables';
 @import 'mixins';
-@import 'mobile';
 @import 'functions';
 
 
@@ -62,7 +61,8 @@ header {
 };
 main {
     padding: 4rem;
-    height: 100%;
+    // height: 100%;
+    min-height: calc(100vh - 60px);
     &#home{
         overflow: hidden;
         h1 {
@@ -136,26 +136,93 @@ main {
     'bioimage bio bio'
     'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
-}
-.bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: $secondaryColor 3px solid;
-}
-.bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-    .text-secondary {
-        color: $secondaryColor;
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondaryColor 3px solid;
+    }
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+        .text-secondary {
+            color: $secondaryColor;
+        }
+    }
+    .job-1{
+        grid-area: job1;
+    }
+    .job-2{
+        grid-area: job2;
+    }
+    .job-3{
+        grid-area: job3;
+    }
+
+    .job {
+        background: lighten($color: $mainColor, $amount: 5);
+        padding: 0.5rem;
+        border-bottom: $secondaryColor 5px solid;
     }
 }
-.job-1{
-    grid-area: job1;
+
+// Work/Projects
+.projects-info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        width: 100%;
+        border:3px white solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondaryColor;
+            @include easeOut;
+        }
+    }
 }
-.job-2{
-    grid-area: job2;
+//  Button styles 
+
+.btn {
+    display: block;
+    padding: 0.5rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background-color: $secondaryColor;
+        color: set-text-color($secondaryColor);
+    }
 }
-.job-3{
-    grid-area: job3;
+.btn-dark {
+    @extend .btn;
+    background:darken($color: $mainColor, $amount: 50) ;
+    color: white;
 }
+.btn-light {
+    @extend .btn;
+    background:lighten($color: $mainColor, $amount: 50) ;
+    color: #333;
+}
+
+
+
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($mainColor, 10);
+    color: set-text-color($mainColor);
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+@import 'mobile';
