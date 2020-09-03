@@ -12,13 +12,14 @@
 }
 
 body{
-    @include background();
-    height: 100vh;
-    background-color: set-text-color($mainColor);
+    @include background;
+    background: $mainColor;
+    height: 100%;
+    color: set-text-color($mainColor);
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-    color: white;
+    
 }
 
 // Headings 
@@ -145,6 +146,9 @@ main {
 .bio {
     grid-area: bio;
     font-size: 1.5rem;
+    .text-secondary {
+        color: $secondaryColor;
+    }
 }
 .job-1{
     grid-area: job1;
