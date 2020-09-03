@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'mobile';
+@import 'functions';
 
 
 
@@ -13,7 +14,7 @@
 body{
     @include background();
     height: 100vh;
-    background-color: $mainColor;
+    background-color: set-text-color($mainColor);
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
@@ -127,4 +128,30 @@ main {
         transform: translate(0);
     }
 }
-
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+}
+.bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondaryColor 3px solid;
+}
+.bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+.job-1{
+    grid-area: job1;
+}
+.job-2{
+    grid-area: job2;
+}
+.job-3{
+    grid-area: job3;
+}
