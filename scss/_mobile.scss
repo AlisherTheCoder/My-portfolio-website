@@ -73,8 +73,13 @@
 @include mediaSm {
     main#home h1,h2{
         margin-top: 10vh;
+        .surname {
+            font-size: 3rem;
+        }
+        
     }
     .projects-info {
         grid-template-columns: 1fr;
     }
+    
 }    
