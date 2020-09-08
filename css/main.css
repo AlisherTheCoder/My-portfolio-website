@@ -550,6 +550,10 @@ main .full-stack, main .freelancer {
 }
 
 @media screen and (max-width: 500px) {
+  .projects-info {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .boxes div {
     font-size: 1rem;
   }
