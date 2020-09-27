@@ -129,6 +129,12 @@ main {
         transform: translate(0);
     }
 }
+.logo {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondaryColor 3px solid;
+}
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -248,7 +254,9 @@ main {
 .text-secondary {
     color: $secondaryColor;
 }
-
+h6 {
+    text-transform: uppercase;
+}
 
 
 

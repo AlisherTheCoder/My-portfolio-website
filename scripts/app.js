@@ -34,3 +34,10 @@ function toggleMenu() {
 }
 
 menuBtn.addEventListener('click', toggleMenu);
+
+function clickMe() {
+    copyText = document.getElementById('text')
+    
+    document.execCommand('copy');
+    alert('Email copied')
+}
